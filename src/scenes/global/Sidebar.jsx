@@ -61,8 +61,11 @@ const Sidebar = () => {
   useEffect(() => {
     const path = location.pathname;
     if (path === "/") {
+      setSelected("Login");
+    } else if (path === "/dashboard") {
       setSelected("Dashboard");
-    } else if (path === "/analytics") {
+    }
+    else if (path === "/analytics") {
       setSelected("Analytics");
     } else if (path === "/report") {
       setSelected("Report");
@@ -162,8 +165,16 @@ const Sidebar = () => {
               style={{ color: "white" }}
             >
               <Item
-                title="Dashboard"
+                title="Login"
                 to="/"
+                icon={<HomeOutlinedIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+
+            <Item
+                title="Dashboard"
+                to="/dashboard"
                 icon={<HomeOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}

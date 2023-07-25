@@ -20,9 +20,10 @@ function App() {
           <main className="content">
             <Routes>
        
-              <Route path="/" element={<Dashboard />} />
+              
 
-              <Route path='/login' element={<Login/>} />
+              <Route path='/' element={<Login/>} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path='/analytics' element={<Analytics/>} />
               <Route path="/report" element={<Report/>}/>
             </Routes>
